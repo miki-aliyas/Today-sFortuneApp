@@ -1,12 +1,18 @@
 package com.example.todaysfortuneapp;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.FrameLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import java.util.Random;
 
 public class TopActivity extends AppCompatActivity {
 
@@ -20,5 +26,51 @@ public class TopActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+    }
+    public void clicked(View v) {
+        Button button = findViewById(R.id.button01);
+        ImageView resultImage = findViewById(R.id.resultImage);
+        FrameLayout frameLayout = findViewById(R.id.main);
+
+        String[] drawFortune = {"大吉","吉","中吉","小吉","末吉","凶","大凶"};
+        Random rand = new Random();
+        int randomIndex = rand.nextInt(drawFortune.length);
+        String randomElement = drawFortune[randomIndex];
+        button.setText(randomElement);
+
+        String fileName;
+        switch (randomElement) {
+            case "大吉":
+                fileName = "daikichi";
+                break;
+            case "吉":
+                fileName = "kichi";
+                break;
+            case "中吉":
+                fileName = "chukichi";
+                break;
+            case "小吉":
+                fileName = "shoukichi";
+                break;
+            case "末吉":
+                fileName = "suekichi";
+                break;
+            case "凶":
+                fileName = "kyo";
+                break;
+            case "大凶":
+                fileName = "daikyo";
+                break;
+            default:
+                fileName = "unknown";
+                break;
+        }
+        String imageName = fileName;
+        int imageResId = getResources().getIdentifier(imageName, "drawable", getPackageName());
+        resultImage.setImageResource(imageResId);
+
+        String result_bg = "result_bg";
+        int result_bgId = getResources().getIdentifier(result_bg, "drawable", getPackageName());
+        frameLayout.setBackgroundResource(result_bgId);
     }
 }

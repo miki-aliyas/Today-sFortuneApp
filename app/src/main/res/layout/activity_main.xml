@@ -9,12 +9,14 @@
     tools:context=".TopActivity">
     
     <ImageView
+        android:id="@+id/resultImage"
         android:layout_width="314dp"
         android:layout_height="314dp"
         android:layout_gravity="center"
         android:src="@drawable/omikuji_img"/>
 
     <Button
+        android:id="@+id/button01"
         android:layout_width="231dp"
         android:layout_height="80dp"
         android:layout_gravity="center|bottom"
@@ -23,5 +25,6 @@
         android:textStyle="bold"
         android:textSize="24sp"
         android:textColor="#3F3F3F"
-        android:backgroundTint="#F9CB25" />
+        android:backgroundTint="#F9CB25"
+        android:onClick="clicked" />
 </FrameLayout>
