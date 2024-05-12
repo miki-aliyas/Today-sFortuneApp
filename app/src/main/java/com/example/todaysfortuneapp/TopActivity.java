@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,6 +30,7 @@ public class TopActivity extends AppCompatActivity {
     }
     public void clicked(View v) {
         Button button = findViewById(R.id.button01);
+        TextView resulttext = findViewById(R.id.resultText);
         ImageView resultImage = findViewById(R.id.resultImage);
         FrameLayout frameLayout = findViewById(R.id.main);
 
@@ -37,6 +39,7 @@ public class TopActivity extends AppCompatActivity {
         int randomIndex = rand.nextInt(drawFortune.length);
         String randomElement = drawFortune[randomIndex];
         button.setText(randomElement);
+        resulttext.setText("今日の運勢は…");
 
         String fileName;
         switch (randomElement) {
@@ -50,7 +53,7 @@ public class TopActivity extends AppCompatActivity {
                 fileName = "chukichi";
                 break;
             case "小吉":
-                fileName = "shoukichi";
+                fileName = "shokichi";
                 break;
             case "末吉":
                 fileName = "suekichi";
