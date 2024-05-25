@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/result_bg"
+    tools:context=".TopActivity">
+
+    <TextView
+        android:id="@+id/resultMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="今日の運勢は…"
+        android:textStyle="bold"
+        android:textSize="36sp"
+        android:textColor="#3F3F3F"
+        android:layout_marginTop="44dp"
+        android:layout_marginStart="10dp"/>
+
+    <ImageView
+        android:id="@+id/resultImage"
+        android:layout_width="292dp"
+        android:layout_height="292dp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/resultText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="53dp"
+        android:textStyle="bold"
+        android:textSize="48sp"
+        android:textColor="#3F3F3F"
+        tools:text="大吉"/>
+</FrameLayout>
