@@ -29,61 +29,15 @@ public class TopActivity extends AppCompatActivity {
             return insets;
         });
     }
+    //ボタンクリックしたときに動作する関数名「clicked」をここで定義
     public void clicked(View v) {
         // 乱数を生成する
         Random rand = new Random();
+        // OmikujiItemという列挙型（enum）の定数の中からランダムに1つのインデックスを選択
         int resultId = rand.nextInt(OmikujiItem.values().length);
         // ResultActivityに遷移する
         Intent intent = new Intent(this, ResultActivity.class);
         intent.putExtra(ResultActivity.KEY_RESULT_ID, resultId);
         startActivity(intent);
     }
-//        Button button = findViewById(R.id.button01);
-//        TextView resulttext = findViewById(R.id.resultText);
-//        ImageView resultImage = findViewById(R.id.resultImage);
-//        FrameLayout frameLayout = findViewById(R.id.main);
-//
-//        String[] drawFortune = {"大吉","吉","中吉","小吉","末吉","凶","大凶"};
-//        Random rand = new Random();
-//        int randomIndex = rand.nextInt(drawFortune.length);
-//        String randomElement = drawFortune[randomIndex];
-//        button.setText(randomElement);
-//        resulttext.setText("今日の運勢は…");
-//
-//        String fileName;
-//
-//        switch (randomElement) {
-//            case "大吉":
-//                fileName = "daikichi";
-//                break;
-//            case "吉":
-//                fileName = "kichi";
-//                break;
-//            case "中吉":
-//                fileName = "chukichi";
-//                break;
-//            case "小吉":
-//                fileName = "shokichi";
-//                break;
-//            case "末吉":
-//                fileName = "suekichi";
-//                break;
-//            case "凶":
-//                fileName = "kyo";
-//                break;
-//            case "大凶":
-//                fileName = "daikyo";
-//                break;
-//            default:
-//                fileName = "unknown";
-//                break;
-//        }
-//        String imageName = fileName;
-//        int imageResId = getResources().getIdentifier(imageName, "drawable", getPackageName());
-//        resultImage.setImageResource(imageResId);
-//
-//        String result_bg = "result_bg";
-//        int result_bgId = getResources().getIdentifier(result_bg, "drawable", getPackageName());
-//        frameLayout.setBackgroundResource(result_bgId);
-//    }
 }
