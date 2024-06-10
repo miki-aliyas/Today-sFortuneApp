@@ -34,8 +34,9 @@
         android:textSize="48sp"
         android:textColor="#3F3F3F"
         tools:text="大吉"/>
+
     <Button
-        android:id="@+id/button01"
+        android:id="@+id/button02"
         android:layout_width="275dp"
         android:layout_height="60dp"
         android:layout_gravity="center|bottom"
@@ -45,5 +46,5 @@
         android:textSize="20sp"
         android:textColor="#3F3F3F"
         android:backgroundTint="#Fad964"
-        android:onClick="clicked" />
+        android:onClick="backtotop" />
 </FrameLayout>

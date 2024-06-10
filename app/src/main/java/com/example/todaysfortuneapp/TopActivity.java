@@ -29,15 +29,24 @@ public class TopActivity extends AppCompatActivity {
             return insets;
         });
     }
-    //ボタンクリックしたときに動作する関数名「clicked」をここで定義
+    //＜おみくじを引く機能を実装＞
+//   [clicked()]＝ボタンがクリックされた際に呼び出される動作。[View v]＝クリックされたビューを参照する。
     public void clicked(View v) {
         // 乱数を生成する
         Random rand = new Random();
-        // OmikujiItemという列挙型（enum）の定数の中からランダムに1つのインデックスを選択
+//      [OmikujiItem.values().length]＝[OmikujiItem]の列挙型(enum)の要素数を取得する。
+//      [rand.nextInt()]＝0から指定された数（[OmikujiItem]の列挙型(enum)の要素数）未満の乱数を生成。
+//      [resultId]＝0から[OmikujiItem]の列挙型(enum)の要素数未満のランダムな整数が格納される。
         int resultId = rand.nextInt(OmikujiItem.values().length);
-        // ResultActivityに遷移する
+        // ＜「TopActivity(トップ画面)から「ResultActivity」(結果画像)に遷移する」処理＞
+//      [Intent]クラスのオブジェクト[intent]を生成。（別のアクティビティを開始する）
+//　     [this]＝現在のコンテキストを示す。
+//      [ResultActivity.class]＝結果を表示するためのアクティビティのクラス
         Intent intent = new Intent(this, ResultActivity.class);
+//      [putExtra()]を使用して[intent]に追加のデータを設定。[ResultActivity.KEY_RESULT_ID]＝結果IDを識別するためのキー。[ResultActivity]クラス内で定義された定数。
+//      [resultId]おみくじの結果を表すランダムな整数。
         intent.putExtra(ResultActivity.KEY_RESULT_ID, resultId);
+//      [startActivity()]を使用して、指定された[intent]を使って新しいアクティビティを開始。(「ResultActivity」(結果画像)が起動しおみくじの結果が表示される)
         startActivity(intent);
     }
 }
