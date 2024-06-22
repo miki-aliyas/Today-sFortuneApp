@@ -36,8 +36,7 @@ public class ResultActivity extends AppCompatActivity {
         resultText.setText(item.getResultText());
     }
     //<ResultActivityのレイアウトと戻るボタンが表示された後、ボタンがクリックされるとTopActivityに移動する処理>
-    public void backtotop(View v) {
-        Intent intent = new Intent(this, TopActivity.class);
-        startActivity(intent);
+    public void backToTop(View v) {
+        getOnBackPressedDispatcher().onBackPressed();
     }
 }
