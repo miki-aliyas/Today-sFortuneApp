@@ -20,9 +20,6 @@ import java.net.URL;
 public class ResultActivity extends AppCompatActivity {
     public static final String KEY_RESULT_ID = "com.example.todaysfortuneapp.key_result_id";
 
-    // LINE Notifyのアクセストークンを定義
-    private static final String TOKEN = "M7bHDTSc1LIDeoq7vh4VxNw66V3ceQ1WwfUgMFvEozN";
-
     private String lineResultText;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,7 +66,7 @@ public class ResultActivity extends AppCompatActivity {
 
                 // HTTPリクエストヘッダーの設定
                 conn.setRequestMethod("POST");
-                conn.setRequestProperty("Authorization", "Bearer " + TOKEN);
+                conn.setRequestProperty("Authorization", "Bearer " + BuildConfig.TOKEN);
                 conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
 
                 // ペイロードの設定

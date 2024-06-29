@@ -1,12 +1,21 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.androidApplication)
 }
 
 android {
+    buildFeatures {
+        buildConfig = true
+    }
     namespace = "com.example.todaysfortuneapp"
     compileSdk = 34
 
     defaultConfig {
+        val localProperties = project.rootProject.file("local.properties")
+        val properties = Properties()
+        properties.load(localProperties.inputStream())
+        val token = properties.getProperty("line_token")
         applicationId = "com.example.todaysfortuneapp"
         minSdk = 29
         targetSdk = 34
@@ -14,6 +23,8 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField("String", "TOKEN", "\"${token}\"")
     }
 
     buildTypes {
