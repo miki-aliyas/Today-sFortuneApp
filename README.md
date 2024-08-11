@@ -10,8 +10,8 @@
 <img src="https://miki-aliyas.github.io/img/omikuji-app1.png">
 
 > 2.　結果が表示される
+> > 3. 「トップページに戻る」をタップ
 <img src="https://miki-aliyas.github.io/img/omikuji-app2.png">
 
-> 3. 「トップページに戻る」をタップ
 > 4. 自身のスマートフォンのLINEにおみくじ結果が届く
 <img src="https://miki-aliyas.github.io/img/omikuji-app3.jpeg">
