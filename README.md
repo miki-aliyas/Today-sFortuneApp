@@ -1,11 +1,11 @@
-###Today-sFortuneApp
-###今日の運勢をワンクリックで占えるアプリ
+### Today-sFortuneApp
+### 今日の運勢をワンクリックで占えるアプリ
 
-**デザイン
+**デザイン**
 > Figmaを使用してデザイン決め
 <img src="https://miki-aliyas.github.io/img/figma1.png">
 
-**アプリ
+**アプリ**
 1. 「おみくじを引く」をタップ
 <img src="https://miki-aliyas.github.io/img/omikuji-app1.png">
 2.　結果が表示される
