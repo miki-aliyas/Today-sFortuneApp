@@ -13,4 +13,4 @@
 <img src="https://miki-aliyas.github.io/img/omikuji-app2.png">
 
 > 3. 自身のスマートフォンのLINEにおみくじ結果が届く
-<img src="https://miki-aliyas.github.io/img/omikuji-app3.jpeg">
+<img src="https://miki-aliyas.github.io/img/omikuji-app3.jpg">
